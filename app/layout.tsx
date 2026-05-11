@@ -29,6 +29,21 @@ export const metadata: Metadata = {
     description:
       "Architecting autonomous systems at the intersection of AI and Blockchain",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Prince Raj - Blockchain & AI Systems Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prince Raj | Blockchain & AI Systems Engineer",
+    description:
+      "Architecting autonomous systems at the intersection of AI and Blockchain",
+    images: ["/og-image.png"],
   },
 };
 

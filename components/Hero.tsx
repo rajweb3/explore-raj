@@ -63,8 +63,6 @@ export default function Hero({
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4 font-mono text-xs tracking-[0.15em] text-secondary dark:text-comment uppercase">
-          <span>{location.toUpperCase()}</span>
-          <span className="text-border">|</span>
           <a
             href={`mailto:${email}`}
             className="hover:text-accent dark:text-link dark:hover:text-link transition-colors duration-200"

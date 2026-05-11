@@ -13,7 +13,6 @@ contact:
 ## Blockchain & AI Systems Engineer  
 *A blockchain generalist who can go from idea to end product.*
 
-📍 Bangalore, India  
 📞 +91 9066393213  
 📧 rajprince.cs@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/rajweb3/)
