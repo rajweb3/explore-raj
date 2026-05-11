@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--color-bg);
+  --color-primary: var(--color-fg);
+  --color-secondary: var(--color-muted);
+  --color-accent: var(--color-accent-val);
+  --color-border: var(--color-edge);
+  --color-keyword: var(--color-keyword-val);
+  --color-function: var(--color-function-val);
+  --color-string: var(--color-string-val);
+  --color-type: var(--color-type-val);
+  --color-comment: var(--color-comment-val);
+  --color-variable: var(--color-variable-val);
+  --color-link: var(--color-link-val);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-dm-serif);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+:root {
+  --color-bg: #F3F3F1;
+  --color-fg: #111111;
+  --color-muted: #6E6E6E;
+  --color-accent-val: #4F6F5B;
+  --color-edge: #D8D8D8;
+  /* Light mode: all syntax colors collapse to the normal palette */
+  --color-keyword-val: #6E6E6E;
+  --color-function-val: #111111;
+  --color-string-val: #6E6E6E;
+  --color-type-val: #6E6E6E;
+  --color-comment-val: #6E6E6E;
+  --color-variable-val: #111111;
+  --color-link-val: #4F6F5B;
+}
+
+.dark {
+  --color-bg: #0D1117;
+  --color-fg: #E6EDF3;
+  --color-muted: #7D8590;
+  --color-accent-val: #E85D2A;
+  --color-edge: #21262D;
+  /* Code-editor syntax highlighting colors */
+  --color-keyword-val: #C678DD;    /* purple — section labels, nav links */
+  --color-function-val: #61AFEF;   /* blue — job titles, skill categories */
+  --color-string-val: #D4BFFF;     /* soft lavender — tagline, about text */
+  --color-type-val: #E5C07B;       /* gold — company names */
+  --color-comment-val: #5C6370;    /* dim gray — dates, periods */
+  --color-variable-val: #E06C75;   /* coral — name heading */
+  --color-link-val: #56B6C2;       /* cyan — links */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection {
+  background-color: var(--color-accent-val);
+  color: #FFFFFF;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Blinking terminal cursor */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.terminal-cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--color-accent-val);
+}
+
+/* Terminal scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-edge);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
